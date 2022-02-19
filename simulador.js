@@ -23,7 +23,14 @@ function simular() {
   let campoAporteMensal = document.getElementById('aporteMes').value;
   let cleanAporteMensal = inputPrazo.replace(/[^0-9,]*/g, "").replace(",", "."); 
  
-  if (inputPrazo === "") {
+  if(campoAporteMensal === ""){
+    document.getElementById('hrAvisos').style.borderColor = 'red';
+    document.getElementById("aporteMensal").style.color = "red";
+  }if(campoAporteMensal !== ""){
+    document.getElementById('hrAvisos').style.borderColor = '';
+    document.getElementById("aporteMensal").style.color = "black";
+    
+   }if (inputPrazo === "") {
     document.getElementById('hrAviso').style.borderColor = 'red';
     document.getElementById("prazoMes").style.color = "red";
     document.getElementById("msgAviso").style.visibility = "visible";
@@ -32,14 +39,9 @@ function simular() {
     document.getElementById('hrAviso').style.borderColor = '';
     document.getElementById("prazoMes").style.color = "black";
     document.getElementById("msgAviso").style.visibility = "hidden";
-  }
+  
     
-  if(campoAporteMensal === ""){
-    document.getElementById('hrAvisos').style.borderColor = 'red';
-    document.getElementById("aporteMensal").style.color = "red";
-  }if(campoAporteMensal !== ""){
-    document.getElementById('hrAvisos').style.borderColor = '';
-    document.getElementById("aporteMensal").style.color = "black";
+  
 
     
         array.forEach((element) => {
@@ -54,23 +56,16 @@ function simular() {
         let inputAporte = document.getElementById("aporte").value;
         let cleanAporte = inputAporte.replace(/[^0-9,]*/g, "").replace(",", ".");
         let valorAporte = parseFloat(cleanAporte);
-      
+        valorAporte = 0;
         let inputAporteMes = document.getElementById("aporteMes").value;
         let cleanAporteMes = inputAporteMes.replace(/[^0-9,]*/g, "").replace(",", ".");
         let valorAporteMes = parseFloat(cleanAporteMes);
 
-
-
         let valorInvestido = valorAporte + valorAporteMes * newPrazo;
-        if (valorAporte === "" || valorAporteMes === "") {
-        valorAporte = 0;
-        valorAporteMes = 0;
-        }
+       
         let valorTotalInvestido = (valorInvestido.toFixed(2)); //VALOR SOMA DOS 2 VALORES OK
 
         let taxa = 1.05;
-        var montanteAporteInicial = valorAporte * Math.pow(1 + taxa / 100, newPrazo);
-
         let valorTotal = 0;
         let valorAdicional = valorAporteMes;
         let quantidadeMeses = newPrazo;
