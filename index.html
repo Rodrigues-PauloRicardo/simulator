@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simulador</title>    
+</head>
+<body>
+    <Header>
+        <div className="container">
+            <h1>Simulador de Investimentos</h1>           
+        </div>                   
+    </Header>
+    <div class="containerPage">
+        <div class="telasIniciais">
+        <div class="simulaTela">
+        <div class="title">Simulador</div>
+        <div class="rendimento">           
+        <p>Rendimento</p>
+        <img src="imgs/icone.png" alt="">          
+        </div>
+        <label>
+            <form action="" autocomplete="off">        
+    <div class="btns">
+        <input type="button" value="Bruto"  id="btn01" name="btn" onclick="arrayBotao(id=this.id)"><div id="setaBruto" >✔</div>
+        <input type="button" value="Líquido" id="btn02" name="btn" onclick="arrayBotao(id=this.id)"><div id="setaLiquido" >✔</div>
+    </div>   
+        <p>Aporte Inicial</p>
+       <input type="text" size="12" onInput="mascaraMoeda(event)" name= "aporte" id="aporte" value=""/>
+          <!-- -->          
+        <hr>
+        <p id="prazoMes">Prazo (em meses)</p>
+        <input type="text" pattern="\d* "maxlength="4" name= "prazo" id="prazo"  value=""/>
+        <hr id="hrAviso">                       <!--trthhhhhhhhhhhhhhhhhhhhhhhh-->
+        <p id="msgAviso">Campo Obrigatório</p>        
+        <p id="ipcaTitle">IPCA (ao ano)</p>
+        <span id="ipca"></span>
+        <hr>             
+        <input type="button" value="Limpar campos" class="limpar" onclick="limpar()" >   
+    </div>
+    <div class="simular">
+        <div class="title">.</div> 
+        <div class="rendimento">            
+        <p>Tipos de Indexação</p>
+        <img src="imgs/icone.png" alt="">  
+    </div>
+    <div class="btns">
+        <input type="button" value="Pré"    id="btn03" name="btn2" onclick="arrayBotao1(id=this.id)"> <div id="setaPre" >✔</div>
+        <input type="button" value="Pós"    id="btn04" name="btn2" onclick="arrayBotao1(id=this.id)"> <div id="setaPos" >✔</div>
+        <input type="button" value="Fixado" id="btn05" name="btn2" onclick="arrayBotao1(id=this.id)">         
+    </div>                                 
+            <p id="aporteMensal">Aporte Mensal </p>
+            <input type="text" onInput="mascaraMoeda(event)" name= "aporteMes" id="aporteMes" value=""/>   
+            <hr id="hrAvisos">                                                
+            <p>Rentabilidade</p>
+            <input type="number" name= "rentabilidade" id="rentabilidade" value="20%" placeholder="20%" readonly/> 
+            <hr>
+            <p>CDI (ao ano)</p>
+            <span id="cdi"></span>
+            <hr>
+            <input type="button" value="Simular" id="btnSimular" onclick="simular()" >             
+            <form>        
+    </div>
+</div>
+    <div id="resultado" >      
+            <div class="title">Resultado da Simulação</div>
+            <div class= "boxGeral">
+                <div class="superior">
+                <div class="box">
+                    <div class="caixaTexto">Valor Final Bruto</div>
+                    <span id="finalBruto">
+                        <span id="finalBr"></span>
+                    </span>
+                </div>
+                <div class="box">
+                    <div class="caixaTexto">Alíquota do IR</div>
+                    <span id="aliquotaIr">
+                        <span id="ir"></span>
+                    </span>
+                </div>
+                <div class="box">
+                    <div class="caixaTexto">Valor Pago em IR</div>
+                    <span id="valorPago">
+                        <span id="vlPago"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="inferior">
+                <div class="box">
+                    <div class="caixaTexto">Valor Final Líquido</div>
+                    <span id="finalLiquido">
+                        <span id="finalLi"></span>
+                    </span>
+                </div>
+                <div class="box">
+                    <div class="caixaTexto">Valor Total Investido</div>
+                    <span id="totalInvestido">
+                        <span id="totalInv"></span>
+                    </span>
+                </div>
+                <div class="box">
+                    <div class="caixaTexto">Ganho Líquido</div>
+                    <span id="ganhoLiquido">
+                        <span id="ganhoLiq"></span>
+                    </span>
+                </div>
+                </div>
+            </div>            
+                <div class="projecao">
+                    Projeção de Valores
+                </div>           
+                <div class="boxGrafico">                   
+                    <div class="valor">Valor(R$)</div>                
+                    <div class="grafico">
+                        <canvas id="myChart" width="400" height="80"></canvas>
+                    </div>
+</div>
+   </div>
+        <div>  
+   <script src="simulador.js"></script>        
+   <script src="styled.js"></script>     
+   <script src="mascaraMoeda.js"></script>  
+   <script src="limpar.js"></script>  
+</body>
+</html>
