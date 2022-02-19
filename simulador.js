@@ -1,11 +1,7 @@
-fetch(`http://localhost:3000/indicadores`)
-  .then((r) => {
-    return r.json();
-  })
-  .then((corpo) => {
-    document.getElementById("ipca").innerHTML = corpo[1].valor + "%";
-    document.getElementById("cdi").innerHTML = corpo[0].valor + "%";
-  });
+
+    document.getElementById("ipca").innerHTML ="10,06%";
+    document.getElementById("cdi").innerHTML = "9,15%";
+
 
 array = ["0"];
 function arrayBotao(id) {
@@ -45,11 +41,7 @@ function simular() {
     document.getElementById('hrAvisos').style.borderColor = '';
     document.getElementById("aporteMensal").style.color = "black";
 
-    fetch(`http://localhost:3000/simulacoes`)
-      .then((res) => {
-        return res.json();
-      })
-      .then((body) => {
+    
         array.forEach((element) => {
           var ultimo = element.slice(-1)[0];
           escolha1 = ultimo;
@@ -157,6 +149,5 @@ function simular() {
             document.getElementById("totalInv").innerHTML = (valorTotalInvestido);
             document.getElementById("ganhoLiq").innerHTML = (ganhoLiquido.toFixed(2))
         }
-      });
+      };
   }
-}
