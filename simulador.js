@@ -15,6 +15,25 @@ function simular() {
   document.getElementById("btnSimular").style.background = "#FF8631";
   document.getElementById("rentabilidade").style.color = "black";
 
+
+  document.getElementById("colum1").style.height = "15px"; 
+  document.getElementById("colum2").style.height = "20px"; 
+  document.getElementById("colum3").style.height = "25px"; 
+  document.getElementById("colum4").style.height = "30px";
+  document.getElementById("colum5").style.height = "35px";
+  document.getElementById("colum6").style.height = "40px"; 
+  document.getElementById("colum7").style.height = "45px";
+  document.getElementById("colum8").style.height = "50px"; 
+  document.getElementById("colum9").style.height = "55px"; 
+  document.getElementById("colum10").style.height = "60px";
+  document.getElementById("colum11").style.height = "70px"
+  document.getElementById("colum12").style.height = "80px";
+  document.getElementById("colum13").style.height = "90px";
+  document.getElementById("colum14").style.height = "100px";
+  document.getElementById("colum15").style.height = "110px";
+  document.getElementById("colum16").style.height = "120px";
+  document.getElementById("colum17").style.height = "130px";
+
   let inputPrazo = document.getElementById("prazo").value;
   let cleanPrazo = inputPrazo.replace(/[^0-9,]*/g, "").replace(",", ".");
   let newPrazo = parseFloat(cleanPrazo);

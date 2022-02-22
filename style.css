@@ -311,9 +311,7 @@ input[type="number"] {
 .grafico{
     width: 100%;
     height: 130px;
-    background-color: #fff;
     border-radius: 5px;
-    border: 3px solid rgb(146, 143, 150);
 }
 .valor{
     margin-left: 0;
@@ -347,4 +345,29 @@ input[type="number"] {
     margin-top: 21px;
     margin-left: 57px;
     color: transparent;
+}
+.base_graf_Em_Busca{
+    display: flex;
+    width: 100%;
+}
+.graf1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: flex-end;
+    font-size: 13px;
+}
+.graficos{    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px; 
+}
+
+#colum1, #colum2, #colum3, #colum4,#colum5, #colum6,#colum7, #colum8,#colum9, #colum10,#colum11, #colum12,#colum13, #colum14,#colum15, #colum16,#colum17  {   
+    background-color:#FF8631;
+    width: 27px;
+    height: 80px;
+    transition: height .5s;
+    align-self: flex-end; 
 }
