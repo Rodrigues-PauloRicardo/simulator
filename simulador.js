@@ -15,7 +15,6 @@ function simular() {
   document.getElementById("btnSimular").style.background = "#FF8631";
   document.getElementById("rentabilidade").style.color = "black";
 
-
   document.getElementById("colum1").style.height = "15px"; 
   document.getElementById("colum2").style.height = "20px"; 
   document.getElementById("colum3").style.height = "25px"; 
