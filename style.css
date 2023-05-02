@@ -371,4 +371,18 @@ input[type="number"] {
     align-self: flex-end; 
 }
 
+footer{
+    display: none; 
+
+}
+
+@media screen and (max-width:500px) {
+    footer{font-size: 10px;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        display: block;       
+    }
+}
+
 
